@@ -50,7 +50,7 @@ public class PGPCodesignTest {
         SignedSignatureAttributes parsedSig = SignedSignatureAttributes.parse(new DataInputStream(new ByteArrayInputStream(serializedSig)));
 
         Assert.assertTrue(parsedSig.attributes.attributes.hashAlgorithm == HashAlgorithm.SHA512);
-        Assert.assertTrue(parsedSig.attributes.attributes.pkAlgorithm == PublicKeyAlgorithm.RSA_SIGN_ONLY);
+        Assert.assertTrue(parsedSig.attributes.attributes.pkAlgorithm == PublicKeyAlgorithm.RSA_ENCRYPT_OR_SIGN);
         Assert.assertTrue(parsedSig.attributes.attributes.type == SignatureType.BINARY);
         Assert.assertFalse(parsedSig.attributes.attributes.unhashedSubpackets.issuer.header.type.critical);
     }

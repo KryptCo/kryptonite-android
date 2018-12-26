@@ -225,7 +225,7 @@ public class RSASSHKeyPair implements SSHKeyPairI {
     public PublicKeyPacketAttributes pgpPublicKeyPacketAttributes() {
         return new PublicKeyPacketAttributes(
                 created,
-                PublicKeyAlgorithm.RSA_SIGN_ONLY
+                PublicKeyAlgorithm.RSA_ENCRYPT_OR_SIGN
         );
     }
 
